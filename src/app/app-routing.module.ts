@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AssociationComponent } from './components/association/association.component';
 import { ModeOwnerComponent } from './components/owner/mode-owner/mode-owner.component';
 import { OwnerComponent } from './components/owner/owner.component';
 import { SaveOwnerComponent } from './components/owner/save-owner/save-owner.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'owner-save', component: SaveOwnerComponent },
   { path: '', component: ReportComponent },
   { path: 'report/:n', component: ReportComponent },
+  { path: 'association', component: AssociationComponent }
 ];
 
 @NgModule({

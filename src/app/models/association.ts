@@ -5,7 +5,6 @@ export interface Association {
 }
 
 export interface AssociationDto {
-    associationId: number,
     vehicleId: number,
     ownerId: number
 }

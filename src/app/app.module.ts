@@ -6,6 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { DragDropModule } from "@angular/cdk/drag-drop";
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
@@ -20,6 +22,9 @@ import { ListOwnerComponent } from './components/owner/list-owner/list-owner.com
 import { SaveOwnerComponent } from './components/owner/save-owner/save-owner.component';
 import { ModeOwnerComponent } from './components/owner/mode-owner/mode-owner.component';
 import { ReportComponent } from './components/report/report.component';
+import { AssociationComponent } from './components/association/association.component';
+import { DragdropComponent } from './components/association/dragdrop/dragdrop.component';
+import { SaveAssociationComponent } from './components/association/save-association/save-association.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { ReportComponent } from './components/report/report.component';
     ListOwnerComponent,
     SaveOwnerComponent,
     ModeOwnerComponent,
-    ReportComponent
+    ReportComponent,
+    AssociationComponent,
+    DragdropComponent,
+    SaveAssociationComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,8 @@ import { ReportComponent } from './components/report/report.component';
     SweetAlert2Module.forRoot(),
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
   providers: [
     DatePipe
