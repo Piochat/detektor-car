@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="jumbotron text-center mt-3">
+        <h2>Modificar Propietario</h2>
+    </div>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-2">
+                    <label for="firstname" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" required [(ngModel)]="owner.firstname">
+                </div>
+                <div class="mb-2">
+                    <label for="lastname" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" required [(ngModel)]="owner.lastname">
+                </div>
+                <div class="mb-2">
+                    <label for="dpi" class="form-label">DPI</label>
+                    <input type="text" class="form-control" id="dpi" placeholder="#####" name="dpi" required [(ngModel)]="owner.dpi">
+                </div>
+                <div class="mb-2">
+                    <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" required [(ngModel)]="owner.birthdate">
+                </div>
+                <div class="mb-2">
+                    <label for="address" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="address" placeholder="12.34" name="address" required [(ngModel)]="owner.address">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="john@doe.com" name="email" required [(ngModel)]="owner.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Tel.</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="######" name="phone" required [(ngModel)]="owner.phone">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-secondary w-100" [disabled]="!f.valid">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

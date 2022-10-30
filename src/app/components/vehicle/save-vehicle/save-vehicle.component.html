@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="jumbotron text-center mt-3">
+        <h2>Agregar Vehículo</h2>
+    </div>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="mb-2">
+                    <label for="plate" class="form-label">Placa</label>
+                    <input type="text" class="form-control" id="palte" placeholder="$$$XXX" name="plat" required [(ngModel)]="plate">
+                </div>
+                <div class="mb-2">
+                    <label for="brand" class="form-label">Marca</label>
+                    <input type="text" class="form-control" id="brand" placeholder="Marca" name="brand" required [(ngModel)]="brand">
+                </div>
+                <div class="mb-2">
+                    <label for="vin" class="form-label">VIN</label>
+                    <input type="text" class="form-control" id="vin" placeholder="#####" name="vin" required [(ngModel)]="vin">
+                </div>
+                <div class="mb-2">
+                    <label for="line" class="form-label">Línea</label>
+                    <input type="text" class="form-control" id="line" placeholder="Ej. SX4" name="line" required [(ngModel)]="line">
+                </div>
+                <div class="mb-2">
+                    <label for="color" class="form-label">Color</label>
+                    <input type="text" class="form-control" id="color" placeholder="Rojo" name="color" required [(ngModel)]="color">
+                </div>
+                <div class="mb-2">
+                    <label for="typeVehicle" class="form-label">Tipo</label>
+                    <select name="typeVehicle" id="typeVehicle" class="form-select  mb-2" aria-label="Default select example" [(ngModel)]="typeVehicle">
+                        <option selected value="SUV">SUV</option>
+                        <option value="SEDAN">SEDAN</option>
+                        <option value="TRUCK">TRUCK</option>
+                        <option value="PICKUP">PICKUP</option>
+                        <option value="BIKE">BIKE</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="model" class="form-label">Modelo</label>
+                    <input type="text" class="form-control" id="model" placeholder="2000" name="model" required [(ngModel)]="model">
+                </div>
+                <div class="mb-3">
+                    <label for="cylinderCapacity" class="form-label">Cilindraje</label>
+                    <input type="text" class="form-control" id="cylinderCapacity" placeholder="" name="cylinderCapacity" required [(ngModel)]="cylinderCapacity">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-secondary w-100" [disabled]="!f.valid">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

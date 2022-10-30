@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="jumbotron text-center mt-3">
+        <h2>Reports</h2>
+    </div>
+    <hr>
+    <div class="row">
+        <form (ngSubmit)="getReports()" >
+            <div class="col-sm-4">
+                <label for="n" class="form-label">Buscar por Apellido</label>
+                <input type="text" class="form-control" id="n" placeholder="Doe" name="n" required [(ngModel)]="n">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-secondary" routerLink="/report/{{n}}">Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">#</th>
+                <th scope="col">Placa</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let report of reports">
+                <th scope="row">{{report.ownerId}}</th>
+                <td>{{report.firstname}} {{report.lastname}}</td>
+                <td>{{report.vehicleId}}</td>
+                <td>{{report.plate}}</td>
+                <td>{{report.brand}}</td>
+                <td>{{report.color}}</td>
+            </tr>
+    </table>
+</div>
